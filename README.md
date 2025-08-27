@@ -29,6 +29,10 @@ This template includes a simple `get_cat_fact()` tool as an example - replace it
    - Open the Chat panel in VS Code
    - Click the wrench icon (🔧) to see available MCP tools
    - Your `get_cat_fact()` tool should appear and be ready to use
+   - Test with prompts like:
+     - "Do you see a cat fact mcp tool?"
+     - "Get me a cat fact"
+   - **Note**: The AI agent should prompt you that it will use an MCP tool before executing it. If you don't see this prompt, the tool isn't being used.
 
 ## MCP Configuration
 
