@@ -15,33 +15,20 @@ This template includes a simple `get_cat_fact()` tool as an example - replace it
 
 ## Quick Start
 
-### Local Development
-
-1. **Set up Python environment**:
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate
-   pip install -r requirements.txt
-   ```
-
-2. **Run the server**:
-   ```bash
-   python server.py
-   ```
-
-3. **Server will be available at**: `http://localhost:8000/mcp`
-
-### Docker Deployment
-
-1. **Build the image**:
+1. **Build and run the Docker container**:
    ```bash
    docker build -t mcp-server .
-   ```
-
-2. **Run the container**:
-   ```bash
    docker run -p 8000:8000 mcp-server
    ```
+
+2. **Connect in VS Code**:
+   - Click the "Start" button on the `.vscode/mcp.json` file that appears in VS Code
+   - The MCP server will be automatically configured and connected
+
+3. **Access your tools**:
+   - Open the Chat panel in VS Code
+   - Click the wrench icon (🔧) to see available MCP tools
+   - Your `get_cat_fact()` tool should appear and be ready to use
 
 ## MCP Configuration
 
@@ -60,6 +47,24 @@ Add this to your `.vscode/mcp.json` file:
 ## Available Tools (Example)
 
 - `get_cat_fact()`: Example tool that returns a random cat fact - replace with your own tools
+
+## Debugging with MCP Inspector
+
+For debugging and testing your MCP server, you can use the MCP Inspector:
+
+1. **Install and run MCP Inspector**:
+   ```bash
+   npx @modelcontextprotocol/inspector
+   ```
+
+2. **Configure the connection**:
+   - Set transport type to: `httpstreamable`
+   - Set URL to: `http://localhost:8000/mcp`
+
+3. **Test your tools**:
+   - The inspector will show all available tools and their schemas
+   - You can test each tool directly from the web interface
+   - View server capabilities and debug any issues
 
 ## Customizing the Template
 
